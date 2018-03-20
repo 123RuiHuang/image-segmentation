@@ -5,7 +5,7 @@ I(:)=1:m*n;
 center=floor(width/2)+1;   
 for i=1:width
     for j=1:width
-        Distance((j-1)*width+i)=sqrt((i-center)^2+(j-center)^2);%使用到矩阵的线性寻址
+        Distance((j-1)*width+i)=sqrt((i-center)^2+(j-center)^2);
     end
 end
 Distance=Distance';
@@ -16,7 +16,7 @@ windows=zeros(width*width,m*n);
 for i=1:m
     for j=1:n
         temp=paddingImg(i:i+2*halfSizeOfWindow,j:j+2*halfSizeOfWindow);
-        windows(:,(j-1)*m+i)=temp(:);                    %矩阵线性寻址
+        windows(:,(j-1)*m+i)=temp(:);                   
     end
 end
 centerPosition=(center-1)*width+center;
