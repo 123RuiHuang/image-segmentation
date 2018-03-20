@@ -1,7 +1,6 @@
 
 function [clustCent,data2cluster,cluster2dataCell] = MeanShift_Helper(dataPts,bandWidth,plotFlag)
 %perform MeanShift Clustering of data using a flat kernel
-%
 % ---INPUT---
 % dataPts           - input data, (numDim x numPts)
 % bandWidth         - is bandwidth parameter (scalar)
@@ -10,13 +9,6 @@ function [clustCent,data2cluster,cluster2dataCell] = MeanShift_Helper(dataPts,ba
 % clustCent         - is locations of cluster centers (numDim x numClust)
 % data2cluster      - for every data point which cluster it belongs to (numPts)
 % cluster2dataCell  - for every cluster which points are in it (numClust)
-% 
-% Bryan Feldman 02/24/06
-% MeanShift first appears in
-% K. Funkunaga and L.D. Hosteler, "The Estimation of the Gradient of a
-% Density Function, with Applications in Pattern Recognition"
-
-%*** Check input ****
 if nargin < 2
     error('no bandwidth specified')
 end
